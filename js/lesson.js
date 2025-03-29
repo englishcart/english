@@ -1,21 +1,140 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Обработчики для заголовков секций
-    const headers = document.querySelectorAll('.directions-header');
-    headers.forEach((header, index) => {
-        header.addEventListener('click', function() {
-            const content = this.nextElementSibling;
-            const arrow = this.querySelector('.arrow');
+    // Функция для управления стрелками в разделах
+    function setupSectionArrows() {
+        const sections = document.querySelectorAll('.section');
+        
+        sections.forEach(section => {
+            const header = section.querySelector('.section-header');
+            const content = section.querySelector('.section-content');
+            const arrow = section.querySelector('.arrow');
             
-            // Анимация стрелки
-            arrow.style.transform = content.style.display === 'none' ? 'rotate(180deg)' : 'rotate(0)';
-            
-            // Показ/скрытие контента
-            content.style.display = content.style.display === 'none' ? 'block' : 'none';
-            
-            // Добавляем класс active для анимации
-            this.classList.toggle('active');
+            if (header && content && arrow) {
+                header.addEventListener('click', () => {
+                    content.classList.toggle('show');
+                    arrow.style.transform = content.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0deg)';
+                });
+            }
         });
-    });
+    }
+
+    // Функция для управления стрелками в направлениях
+    function setupDirectionsArrows() {
+        const directionsHeaders = document.querySelectorAll('.directions-header');
+        
+        directionsHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const arrow = header.querySelector('.arrow');
+                
+                if (content && arrow) {
+                    content.classList.toggle('show');
+                    arrow.style.transform = content.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0deg)';
+                }
+            });
+        });
+    }
+
+    // Функция для управления стрелками в словаре
+    function setupVocabularyArrows() {
+        const vocabularyHeaders = document.querySelectorAll('.vocabulary-header');
+        
+        vocabularyHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const arrow = header.querySelector('.arrow');
+                
+                if (content && arrow) {
+                    content.classList.toggle('show');
+                    arrow.style.transform = content.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0deg)';
+                }
+            });
+        });
+    }
+
+    // Функция для управления стрелками в вопросах
+    function setupQuestionsArrows() {
+        const questionsHeaders = document.querySelectorAll('.questions-header');
+        
+        questionsHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const arrow = header.querySelector('.arrow');
+                
+                if (content && arrow) {
+                    content.classList.toggle('show');
+                    arrow.style.transform = content.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0deg)';
+                }
+            });
+        });
+    }
+
+    // Функция для управления стрелками в грамматике
+    function setupGrammarArrows() {
+        const grammarHeaders = document.querySelectorAll('.grammar-header');
+        
+        grammarHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const arrow = header.querySelector('.arrow');
+                
+                if (content && arrow) {
+                    content.classList.toggle('show');
+                    arrow.style.transform = content.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0deg)';
+                }
+            });
+        });
+    }
+
+    // Функция для управления стрелками в построении предложений
+    function setupSentenceBuildingArrows() {
+        const sentenceHeaders = document.querySelectorAll('.sentence-building-header');
+        
+        sentenceHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const arrow = header.querySelector('.arrow');
+                
+                if (content && arrow) {
+                    content.classList.toggle('show');
+                    arrow.style.transform = content.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0deg)';
+                }
+            });
+        });
+    }
+
+    // Функция для управления стрелками в обсуждении
+    function setupDiscussionArrows() {
+        const discussionHeaders = document.querySelectorAll('.discussion-header');
+        
+        discussionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const arrow = header.querySelector('.arrow');
+                
+                if (content && arrow) {
+                    content.classList.toggle('show');
+                    arrow.style.transform = content.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0deg)';
+                }
+            });
+        });
+    }
+
+    // Функция для управления стрелками в скрипте
+    function setupScriptArrows() {
+        const scriptHeaders = document.querySelectorAll('.script-header');
+        
+        scriptHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const arrow = header.querySelector('.arrow');
+                
+                if (content && arrow) {
+                    content.classList.toggle('show');
+                    arrow.style.transform = content.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0deg)';
+                }
+            });
+        });
+    }
 
     // Обработчики для кнопок в секции Vocabulary
     const vocabButtons = document.querySelectorAll('.vocab-btn');
@@ -100,4 +219,14 @@ document.addEventListener('DOMContentLoaded', function() {
             element.style.transform = 'translateY(0)';
         }, index * 200);
     });
+
+    // Инициализация всех стрелок при загрузке страницы
+    setupSectionArrows();
+    setupDirectionsArrows();
+    setupVocabularyArrows();
+    setupQuestionsArrows();
+    setupGrammarArrows();
+    setupSentenceBuildingArrows();
+    setupDiscussionArrows();
+    setupScriptArrows();
 }); 
