@@ -19,6 +19,9 @@ body {
     line-height: 1.6;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     color: #333;
+    font-size: 16px; /* Базовый размер шрифта */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -436,6 +439,71 @@ body {
         max-height: none;
         overflow: visible;
         padding: 15px;
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .vocabulary-list .word {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .vocabulary-list .definition {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .question {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .question-item .options label {
+        font-size: 1.1rem;
+        padding: 12px;
+        line-height: 1.5;
+    }
+
+    .grammar-item .question,
+    .grammar-item .sentence {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    .grammar-select {
+        font-size: 1.1rem;
+        padding: 8px 12px;
+    }
+
+    .sentence-parts {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    .sentence-input {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+
+    .discussion-item .question,
+    .script-item .text {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    .script-item .speaker {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .cartoon-info h3 {
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    .cartoon-info p {
+        font-size: 1.2em;
+        line-height: 1.6;
     }
 }
 
