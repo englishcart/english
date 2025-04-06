@@ -35,50 +35,101 @@ body {
 
 /* Header styles */
 .main-header {
-    background: linear-gradient(135deg, #FFB5C5 0%, #FF9EAA 100%);
-    padding: 20px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    border-bottom: 5px solid #FFE180;
+    background: linear-gradient(135deg, #FFF6B7 0%, #F6416C 100%);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.main-header .container {
+.header-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
-}
-
-.logo h1 {
-    color: white;
-    font-size: 2.5em;
-    text-align: center;
-    text-shadow: 3px 3px 0 #FF809B;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    padding: 0.5rem 0;
 }
 
 .logo a {
-    text-decoration: none;
-}
-
-.main-nav ul {
     display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-.main-nav a {
+    align-items: center;
     text-decoration: none;
-    color: var(--text-color);
-    font-weight: bold;
-    transition: all 0.3s;
-    padding: 8px 15px;
-    border-radius: 20px;
+    gap: 0.5rem;
 }
 
-.main-nav a:hover,
-.main-nav a.active {
-    background-color: var(--accent-color);
-    color: var(--text-color);
+.logo-icon {
+    font-size: 2.5rem;
+    animation: bounce 2s infinite;
+}
+
+.logo-text {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 0 #FF6B6B,
+                 4px 4px 0 #4ECDC4;
+    transition: all 0.3s ease;
+}
+
+.logo-mascot {
+    font-size: 2.5rem;
+    animation: wave 2s infinite;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+}
+
+.nav-link:hover {
+    background: white;
+    color: #F6416C;
+    transform: translateY(-3px);
+    border-color: #F6416C;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-20deg); }
+    75% { transform: rotate(20deg); }
+}
+
+@media (max-width: 768px) {
+    .header-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .logo-text {
+        font-size: 1.5rem;
+    }
 }
 
 /* Hero section */
