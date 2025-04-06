@@ -139,7 +139,7 @@ body {
 
 /* Hero section */
 .hero {
-    background: linear-gradient(135deg, #FFF6B7 0%, #F6416C 100%);
+    background: linear-gradient(268deg, #f732598f 0%, #361a1f33 50%, #f9000045 100%);
     padding: 80px 0 100px;
     position: relative;
     overflow: hidden;
@@ -166,9 +166,11 @@ body {
     font-weight: 800;
     margin-bottom: 1.5rem;
     line-height: 1.2;
-    text-shadow: 3px 3px 0 #FF69B4,
-                 6px 6px 0 rgba(0,0,0,0.1);
-    animation: bounce 1s ease infinite;
+    background: linear-gradient(135deg, #FFF6B7 0%, #F6416C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    display: inline-block;
 }
 
 .magic {
@@ -189,9 +191,9 @@ body {
 }
 
 .hero-subtitle {
+    color: white;
     font-size: 1.8rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
     text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
 }
 
@@ -213,9 +215,9 @@ body {
 }
 
 .hero-button.primary {
-    background: #F6416C;
-    color: white;
-    border: 3px solid white;
+    background: white;
+    color: #F6416C;
+    border: 3px solid transparent;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
