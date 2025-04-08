@@ -62,24 +62,23 @@ body {
     gap: 0.5rem;
 }
 
-.logo-icon {
-    font-size: 2.5rem;
-    animation: bounce 2s infinite;
+.logo-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .logo-text {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     font-size: 2rem;
     font-weight: bold;
-    color: #fff;
-    text-shadow: 2px 2px 0 #FF6B6B,
-                 4px 4px 0 #4ECDC4;
+    color: white;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
     transition: all 0.3s ease;
-}
-
-.logo-mascot {
-    font-size: 2.5rem;
-    animation: wave 2s infinite;
 }
 
 .nav-menu {
@@ -1594,4 +1593,21 @@ body {
     .feature-item {
         padding: 1.2rem;
     }
+}
+
+/* Contact info styles */
+.contact-info {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
 }
